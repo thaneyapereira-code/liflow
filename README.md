@@ -35,3 +35,4 @@ npm run dev:mobile
 
 Consulte [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) para a evolução técnica.
 
+# liflow
