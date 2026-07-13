@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "LIFLOW",
+    "slug": "liflow",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "liflow",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.liflow.mobile"
+    },
+    "android": {
+      "package": "app.liflow.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
