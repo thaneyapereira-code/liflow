@@ -16,6 +16,8 @@ O LIFLOW usa duas interfaces especializadas no mesmo monorepo: Next.js para a ex
 
 `profiles`, `accounts`, `categories`, `transactions`, `budgets`, `goals`, `goal_contributions` e `recurring_rules`.
 
+O primeiro schema implementado também inclui `flows`, que agrupam contas por contexto, país ou moeda. `recurring_rules` permanece para um incremento posterior.
+
 Toda tabela financeira deve conter `user_id`, timestamps, moeda em ISO 4217 e valores armazenados em unidades mínimas inteiras. Conversões cambiais nunca substituem o valor e a moeda originais.
 
 ## Sequência sugerida
@@ -25,4 +27,3 @@ Toda tabela financeira deve conter `user_id`, timestamps, moeda em ISO 4217 e va
 - Fase 3: CRUD de transações/contas e dashboard real.
 - Fase 4: orçamentos, metas, recorrências e notificações.
 - Fase 5: beta fechado, telemetria e preparação das lojas.
-

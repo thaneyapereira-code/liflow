@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { dashboard, formatMoney, goalProgress } from "@liflow/domain";
 import Image from "next/image";
+import Link from "next/link";
 
 const nav = [
   ["Visão geral", LayoutDashboard],
@@ -72,7 +73,7 @@ export default function Home() {
           <div><p className="eyebrow">DASHBOARD</p><h1>Visão geral</h1></div>
           <div className="header-actions">
             <button className="icon-button" aria-label="Notificações"><Bell /></button>
-            <div className="profile"><span>T</span><div><b>{dashboard.user}</b><small>Conta pessoal</small></div><ChevronDown /></div>
+            <Link className="profile" href="/entrar"><span>T</span><div><b>{dashboard.user}</b><small>Conta pessoal</small></div><ChevronDown /></Link>
           </div>
         </header>
 

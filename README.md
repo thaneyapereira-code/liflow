@@ -24,6 +24,12 @@ Em outro terminal:
 npm run dev:mobile
 ```
 
+## Conectar o Supabase
+
+O schema financeiro, RLS e clientes de autenticação já estão preparados. Siga o guia em [`docs/SUPABASE.md`](docs/SUPABASE.md) para criar o projeto, aplicar a migration e configurar as chaves públicas.
+
+A tela inicial de autenticação fica em `http://localhost:3000/entrar`.
+
 ## Escopo do MVP
 
 1. Autenticação e onboarding

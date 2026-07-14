@@ -1,4 +1,5 @@
 export type Currency = "EUR" | "BRL" | "USD";
+export type * from "./database";
 
 export type Flow = {
   id: string;
@@ -43,4 +44,3 @@ export function formatMoney(value: number, currency: Currency = "EUR") {
 export function goalProgress(goal: Goal) {
   return Math.min(100, Math.round((goal.current / goal.target) * 100));
 }
-
