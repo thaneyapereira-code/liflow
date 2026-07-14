@@ -5,6 +5,7 @@
     "version": "0.1.0",
     "orientation": "portrait",
     "scheme": "liflow",
+    "icon": "./assets/brand/liflow-icon.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
@@ -13,8 +14,12 @@
     "android": {
       "package": "app.liflow.mobile",
       "adaptiveIcon": {
+        "foregroundImage": "./assets/brand/liflow-mark.png",
         "backgroundColor": "#ffffff"
       }
+    },
+    "web": {
+      "favicon": "./assets/brand/liflow-icon.png"
     },
     "plugins": ["expo-router"],
     "experiments": {

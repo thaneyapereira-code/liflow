@@ -18,11 +18,8 @@ button { color: inherit; }
 a { color: inherit; text-decoration: none; }
 .shell { display: flex; min-height: 100vh; max-width: 1700px; margin: 0 auto; background: rgba(247, 250, 253, .78); }
 .sidebar { width: 232px; padding: 31px 24px 22px; background: rgba(255,255,255,.91); border-right: 1px solid var(--line); display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
-.brand { display: flex; align-items: center; gap: 11px; font: 800 20px/1 var(--font-display); letter-spacing: 3px; margin: 0 10px 42px; }
-.brand-mark { width: 29px; height: 29px; border-radius: 9px; position: relative; overflow: hidden; display: block; background: linear-gradient(145deg, #72df8a, #1bd1bd 57%, #1685fb); }
-.brand-mark:after { content: ""; position: absolute; width: 17px; height: 17px; background: white; top: -1px; right: -1px; border-radius: 0 0 0 10px; }
-.brand-mark i { position: absolute; width: 12px; height: 18px; background: rgba(255,255,255,.2); border-radius: 0 10px 10px 0; bottom: 0; left: 0; }
-.brand-mark b { position: absolute; background: #1685fb; width: 18px; height: 11px; border-radius: 10px 0 0 0; bottom: 0; right: 0; }
+.brand { display: flex; align-items: center; gap: 10px; font: 800 20px/1 var(--font-display); letter-spacing: 3px; margin: 0 10px 42px; }
+.brand-logo { width: 32px; height: 32px; object-fit: contain; }
 .sidebar nav { display: grid; gap: 5px; }
 .sidebar nav a, .sidebar-bottom > a { display: flex; align-items: center; gap: 13px; padding: 12px 13px; border-radius: 10px; color: #536079; font-size: 13px; font-weight: 600; }
 .sidebar nav svg, .sidebar-bottom svg { width: 17px; height: 17px; stroke-width: 1.8; }

@@ -1,10 +1,10 @@
 import { dashboard, formatMoney, goalProgress } from "@liflow/domain";
-import { ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const colors = { navy: "#0B1935", muted: "#75839A", green: "#20C994", blue: "#2688FF", line: "#E9EEF5", white: "#FFFFFF" };
 
 function BrandMark() {
-  return <View style={styles.mark}><View style={styles.markCut} /><View style={styles.markBlue} /></View>;
+  return <Image source={require("../assets/brand/liflow-mark.png")} style={styles.mark} resizeMode="contain" />;
 }
 
 function Metric({ label, value, color = colors.navy, accent = colors.green, trend }: { label: string; value: number; color?: string; accent?: string; trend: string }) {
@@ -60,7 +60,7 @@ export default function DashboardScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: "#F5F8FC" }, content: { paddingHorizontal: 18, paddingTop: 58, paddingBottom: 84 },
   topbar: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, brand: { flexDirection: "row", alignItems: "center", gap: 8 }, brandText: { color: colors.navy, fontSize: 16, fontWeight: "800", letterSpacing: 2.5 },
-  mark: { width: 27, height: 27, borderRadius: 8, backgroundColor: colors.green, overflow: "hidden" }, markCut: { position: "absolute", right: -1, top: -1, width: 16, height: 16, backgroundColor: "white", borderBottomLeftRadius: 10 }, markBlue: { position: "absolute", right: 0, bottom: 0, width: 17, height: 10, backgroundColor: colors.blue, borderTopLeftRadius: 10 }, avatar: { width: 34, height: 34, borderRadius: 17, backgroundColor: colors.blue, alignItems: "center", justifyContent: "center" }, avatarText: { color: "white", fontWeight: "800" },
+  mark: { width: 29, height: 29 }, avatar: { width: 34, height: 34, borderRadius: 17, backgroundColor: colors.blue, alignItems: "center", justifyContent: "center" }, avatarText: { color: "white", fontWeight: "800" },
   hello: { marginTop: 28, marginBottom: 17 }, helloTitle: { color: colors.navy, fontSize: 22, fontWeight: "800" }, helloText: { color: colors.muted, fontSize: 12, marginTop: 5 },
   balanceCard: { backgroundColor: colors.white, borderRadius: 18, padding: 18, shadowColor: "#183556", shadowOpacity: .07, shadowRadius: 18, shadowOffset: { width: 0, height: 8 }, elevation: 3 }, cardTop: { flexDirection: "row", justifyContent: "space-between" }, cardLabel: { color: colors.muted, fontSize: 11 }, month: { backgroundColor: "#F3F6FA", borderRadius: 8, paddingHorizontal: 9, paddingVertical: 5, color: colors.muted, fontSize: 9 }, balance: { color: "#13A97D", fontSize: 27, fontWeight: "800", marginTop: 10 }, okay: { color: colors.navy, fontSize: 10, marginTop: 4 }, divider: { height: 1, backgroundColor: colors.line, marginVertical: 16 }, balanceFooter: { flexDirection: "row", justifyContent: "space-between", paddingRight: 45 }, miniLabel: { color: colors.muted, fontSize: 9 }, income: { color: "#16AE81", fontSize: 12, fontWeight: "700", marginTop: 3 }, expense: { color: "#E44E66", fontSize: 12, fontWeight: "700", marginTop: 3 },
   sectionTitle: { color: colors.navy, fontSize: 15, fontWeight: "800", marginTop: 23, marginBottom: 12 }, metrics: { flexDirection: "row", gap: 10 }, metric: { flex: 1, backgroundColor: "white", borderRadius: 15, padding: 14 }, metricTop: { flexDirection: "row", justifyContent: "space-between" }, metricLabel: { color: colors.muted, fontSize: 9 }, dot: { width: 7, height: 7, borderRadius: 4 }, metricValue: { fontSize: 15, fontWeight: "800", marginTop: 13 }, metricTrend: { fontSize: 9, fontWeight: "700", marginTop: 7 },
@@ -68,4 +68,3 @@ const styles = StyleSheet.create({
   goal: { minHeight: 79, flexDirection: "row", alignItems: "center" }, goalIcon: { width: 36, height: 36, borderRadius: 10, alignItems: "center", justifyContent: "center" }, goalCopy: { flex: 1, marginLeft: 11 }, goalTop: { flexDirection: "row", justifyContent: "space-between" }, percent: { color: colors.muted, fontSize: 9, fontWeight: "700" }, progress: { height: 5, backgroundColor: "#EEF2F6", borderRadius: 5, marginTop: 8, overflow: "hidden" },
   bottomNav: { position: "absolute", left: 0, right: 0, bottom: 0, height: 76, paddingHorizontal: 15, paddingBottom: 8, backgroundColor: "rgba(255,255,255,.98)", borderTopWidth: 1, borderTopColor: colors.line, flexDirection: "row", justifyContent: "space-around", alignItems: "center" }, navItem: { alignItems: "center", minWidth: 50 }, navActive: { alignItems: "center", minWidth: 50 }, navIcon: { color: colors.muted, fontSize: 18 }, navText: { color: colors.muted, fontSize: 8, marginTop: 3 }, navTextActive: { color: colors.blue, fontSize: 8, marginTop: 3, fontWeight: "700" }, add: { width: 46, height: 46, borderRadius: 23, backgroundColor: colors.blue, alignItems: "center", justifyContent: "center", shadowColor: colors.blue, shadowOpacity: .25, shadowRadius: 8, elevation: 4 }, addText: { color: "white", fontSize: 25, marginTop: -2 }
 });
-

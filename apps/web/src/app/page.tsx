@@ -18,6 +18,7 @@ import {
   WalletCards
 } from "lucide-react";
 import { dashboard, formatMoney, goalProgress } from "@liflow/domain";
+import Image from "next/image";
 
 const nav = [
   ["Visão geral", LayoutDashboard],
@@ -32,7 +33,7 @@ const nav = [
 function Brand() {
   return (
     <div className="brand" aria-label="LIFLOW">
-      <span className="brand-mark"><i /><b /></span>
+      <Image className="brand-logo" src="/brand/liflow-mark.png" alt="" width={36} height={36} priority />
       <span>LIFLOW</span>
     </div>
   );
@@ -157,4 +158,3 @@ export default function Home() {
     </main>
   );
 }
-
