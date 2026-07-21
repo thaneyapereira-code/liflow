@@ -22,13 +22,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const nav = [
-  ["Visão geral", LayoutDashboard],
-  ["Transações", ReceiptText],
-  ["Fluxos", SlidersHorizontal],
-  ["Planejamento", WalletCards],
-  ["Metas", Target],
-  ["Relatórios", ChartNoAxesCombined],
-  ["Categorias", Grid2X2]
+  ["Visão geral", LayoutDashboard, "/"],
+  ["Transações", ReceiptText, "/transacoes"],
+  ["Fluxos", SlidersHorizontal, "#"],
+  ["Planejamento", WalletCards, "#"],
+  ["Metas", Target, "#"],
+  ["Relatórios", ChartNoAxesCombined, "#"],
+  ["Categorias", Grid2X2, "#"]
 ] as const;
 
 function Brand() {
@@ -54,8 +54,8 @@ export default function Home() {
       <aside className="sidebar">
         <Brand />
         <nav>
-          {nav.map(([label, Icon], index) => (
-            <a className={index === 0 ? "active" : ""} href="#" key={label}><Icon />{label}</a>
+          {nav.map(([label, Icon, href], index) => (
+            <Link className={index === 0 ? "active" : ""} href={href} key={label}><Icon />{label}</Link>
           ))}
         </nav>
         <div className="sidebar-bottom">
@@ -79,7 +79,7 @@ export default function Home() {
 
         <div className="welcome">
           <div><h2>Olá, {dashboard.user} <span>✦</span></h2><p>Aqui está o ritmo da sua vida financeira neste mês.</p></div>
-          <div className="toolbar"><button>{dashboard.month}<ChevronDown /></button><button className="primary"><Plus />Nova transação</button></div>
+          <div className="toolbar"><button>{dashboard.month}<ChevronDown /></button><Link className="primary" href="/transacoes?nova=1"><Plus />Nova transação</Link></div>
         </div>
 
         <section className="metric-grid">
